@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix Clone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="nav">
+      <div class="left-button">
+        <img src="netflix-logo-png-2576.png" alt="Netflix Logo" id="img-net" />
+      </div>
+      <div class="right-button">
+        <select id="select">
+          <option value="">English</option>
+          <option value="">Hindi</option>
+          <option value="">Urdu</option>
+        </select>
+        <button id="sign">Sign in</button>
+      </div>
+    </div>
+
+    <div class="pain">
+      <div class="main">
+        <div class="headings">
+          <p id="par1">Unlimited movies, TV shows and more</p>
+          <p id="par2">Starts at ₹149. Cancel at any time.</p><br />
+          <p id="par3">Ready to watch? Enter your email to create or restart your membership.</p>
+        </div><br />
+        <div class="lowerheading">
+          <form action="" id="form">
+            <div class="email">
+              <input type="email" id="mail" placeholder="Email address" />
+            </div>
+            <div class="start">
+              <button id="getstart">Get started ></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <h2 class="section-heading">Trending Now</h2>
+    <div class="slider-wrapper">
+      <button class="scroll-btn left" onclick="scrollLeft()">&#10094;</button>
+      <div class="movie-slider" id="slider">
+        <div class="movie-card"><span class="rank">1</span><a href="#"><img src="Deva-1.jpg" alt="Movie 1"></a></div>
+        <div class="movie-card"><span class="rank">2</span><a href="#"><img src="dragon.jpg" alt="Movie 2"></a></div>
+        <div class="movie-card"><span class="rank">3</span><a href="#"><img src="pusha2.jpg" alt="Movie 3"></a></div>
+        <div class="movie-card"><span class="rank">4</span><a href="#"><img src="khakke.jpeg" alt="Movie 4"></a></div>
+        <div class="movie-card"><span class="rank">5</span><a href="#"><img src="south.jpeg" alt="Movie 5"></a></div>
+        <div class="movie-card"><span class="rank">6</span><a href="#"><img src="squidgame.jpeg" alt="Movie 6"></a></div>
+        <div class="movie-card"><span class="rank">7</span><a href="#"><img src="thandel.jpeg" alt="Movie 7"></a></div>
+        <div class="movie-card"><span class="rank">8</span><a href="#"><img src="officer.jpeg" alt="Movie 8"></a></div>
+        <div class="movie-card"><span class="rank">9</span><a href="#"><img src="test.jpg" alt="Movie 9"></a></div>
+        <div class="movie-card"><span class="rank">10</span><a href="#"><img src="emergency.jpg" alt="Movie 10"></a></div>
+      </div>
+      <button class="scroll-btn right" onclick="scrollRight()">&#10095;</button>
+    </div>
+
+    <div class="heads"><h1 id="head">More reasons to join</h1></div>
+    <div class="boxes">
+      <div class="box1">
+        <p id="p1">Enjoy your T.V</p><br />
+        <p>Watch on smart TVs, PlayStation, Xbox, Chromecast, Apple TV, Blu-ray players and more.</p>
+      </div>
+      <div class="box2">
+        <p id="p2">Download your shows to watch offline</p><br />
+        <p>Save your favourites easily and always have something to watch.</p>
+      </div>
+      <div class="box3">
+        <p id="p3">Watch everywhere</p><br />
+        <p>Stream unlimited movies and TV shows on your phone, tablet, laptop and TV.</p>
+      </div>
+      <div class="box4">
+        <p id="p4">Create profiles for kids</p><br />
+        <p>Send kids on adventures with their favourite characters in a space made just for them — free with your membership.</p>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-section">
+      <h1>Frequently Asked Questions</h1>
+      <div class="faq-item">
+        <button class="faq-question">What is Netflix? <span class="plus">+</span></button>
+        <div class="faq-answer">Netflix is a streaming service offering award-winning TV shows, movies, anime, and more.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How much does Netflix cost? <span class="plus">+</span></button>
+        <div class="faq-answer">Plans start at ₹149/month. Watch on your smartphone, tablet, Smart TV, or laptop.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">Where can I watch? <span class="plus">+</span></button>
+        <div class="faq-answer">Watch anywhere, anytime, on any internet-connected device.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">How do I cancel? <span class="plus">+</span></button>
+        <div class="faq-answer">Cancel online at any time in just two clicks with no cancellation fees.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-question">What can I watch on Netflix? <span class="plus">+</span></button>
+        <div class="faq-answer">Watch thousands of TV shows, movies, documentaries, and Netflix originals.</div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+      <p>Questions? Call 000-800-919-1694</p>
+      <div class="footer-links">
+        <a href="#">FAQ</a>
+        <a href="#">Help Centre</a>
+        <a href="#">Account</a>
+        <a href="#">Media Centre</a>
+        <a href="#">Investor Relations</a>
+        <a href="#">Jobs</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Privacy</a>
+      </div>
+      <p style="margin-top: 20px;">Netflix India Clone © 2025</p>
+    </footer>
+  </div>
+
+  <script>
+    const faqButtons = document.querySelectorAll(".faq-question");
+    faqButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        button.classList.toggle("active");
+        const answer = button.nextElementSibling;
+        answer.style.display = answer.style.display === "block" ? "none" : "block";
+        button.querySelector(".plus").textContent = button.classList.contains("active") ? "×" : "+";
+      });
+    });
+  </script>
+</body>
+</html>
